@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            background: linear-gradient(90deg, white 50%, transparent 50%, transparent calc(50% + 250px), white calc(50% + 250px)), linear-gradient(transparent calc(50% - 0.5px), #000000 calc(50% - 0.5px), #000000 calc(50% + 0.5px), transparent calc(50% + 0.5px));
+        }
+
+        .container {
+            width: 400px;
+            height: 50px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.2) 50%, transparent), white;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            margin: auto;
+            line-height: 50px;
+        }
+
+        .container::before {
+            content: "Made in Taiwan";
+            position: absolute;
+            width: 300px;
+            height: 80px;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.2) 50%, transparent), linear-gradient(90deg, rgba(255, 255, 255, 0.5)45%, rgb(0, 0, 0) 45%, rgb(0, 0, 0) 55%, rgba(255, 255, 0, 0.5) 55%), linear-gradient(transparent 10px, white 10px), repeating-linear-gradient(90deg, transparent, transparent 9px, #b4b4b4, #b4b4b4 10px), white;
+            border: 1px solid #ddd;
+            top: -15px;
+            left: 50px;
+            line-height: 145px;
+            color: #b4b4b4;
+            font-size: 12px;
+            text-align: left;
+        }
+
+        .container::after {
+            content: "";
+            width: 40px;
+            height: 80px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.2) 50%, transparent), white;
+            position: absolute;
+            top: -15px;
+            left: -40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container"></div>
+
+</body>
+
+</html>
